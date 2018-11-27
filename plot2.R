@@ -5,7 +5,7 @@
 # Week 1 Project, November 26, 2018
 ################################################################################
 
-# This script downloads and unzips a file of electric power consuption and 
+# This script downloads and unzips a file of electric power consumption and 
 #   generates a line chart (Plot 2) of the Global Active Power in kilowatts.
 #   It then outputs the chart to a png file into the working directory.
 

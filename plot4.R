@@ -5,8 +5,8 @@
 # Week 1 Project, November 26, 2018
 ################################################################################
 
-# This script downloads and unzips a file of electric power consuption and 
-#   generates a histogram (Plot 1) of the Global Active Power in kilowatts.
+# This script downloads and unzips a file of electric power consumption and 
+#   generates a lattice of 4 plots (Plot 4) energy data.
 #   It then outputs the chart to a png file into the working directory.
 
 # If the data is already loaded, skip to # Create Plot 4
@@ -22,7 +22,8 @@ energy <- read.table(unz(temp, "household_power_consumption.txt"),
 unlink(temp)
 
 # Convert Date and Time from factor to dates and times and combine into one field
-energy$datetime <- strptime(paste(energy$Date, energy$Time), format = "%d/%m/%Y %H:%M:%S")
+energy$datetime <- strptime(paste(energy$Date, energy$Time), 
+                            format = "%d/%m/%Y %H:%M:%S")
 
 # Filter data on dates we are examining
 energy <- subset(energy, datetime > "2007-02-01" & datetime < "2007-02-03")
